@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Mensagem enviada com sucesso!");
       form.reset();
     });
+
   }
 
   const assistantBtn = document.createElement("button");
   assistantBtn.id = "assistant-btn";
   assistantBtn.innerText = "🤖 Posso ajudar?";
   document.body.appendChild(assistantBtn);
+
 
   const chatBox = document.createElement("div");
   chatBox.id = "chat-box";
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   assistantBtn.addEventListener("click", () => {
     chatBox.classList.toggle("visible");
   });
+
 
   document.getElementById("chat-input").addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
@@ -47,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  
 
   function greeting() {
     const h = new Date().getHours();
